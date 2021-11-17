@@ -4,7 +4,7 @@
             <input placeholder="Search" v-model="search">
             <input type="submit" class="btn">
         </form>
-        <br><button class="btn"><router-link :to="'/cart'">CART</router-link></button>
+        <br><router-link :to="'/cart'" class="btn cart__button">CART</router-link><br>
         <div class="product" v-for="(item) in filteredItems" v-bind:key="item.id">
             <div class="product-image">
                 <img v-bind:src="item.src">

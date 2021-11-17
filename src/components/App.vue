@@ -46,6 +46,17 @@
     .fade-enter, .fade-leave-active {
         opacity: 0
     }
+    .counter {
+        display: flex;
+        align-items: center;
+        width: 100px;
+        justify-content: space-between;
+    }
+    .counter__button {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
 
     /* Sections */
 

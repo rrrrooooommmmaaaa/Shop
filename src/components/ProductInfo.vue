@@ -1,8 +1,9 @@
 <template>
     <div>
-        <h2 v-if="product">
-            This is page for product #{{ product.id }}: {{ product.item }}
-        </h2>
+        <template v-if="product">
+            <h2>This is page for product {{ product.item }}</h2>
+            <img :src="product.src">
+        </template>
         <h2 v-else>
             Product not found
         </h2>
@@ -21,8 +22,8 @@
             };
         },
         mounted: function() {
-            this.product = products.find((item) => {
-                return (item.id === Number(this.$route.params.id));
+            this.product = this.$store.getters.getProducts.find((item) => {
+                return (item._id === this.$route.params.id);
             });
         }
     }
