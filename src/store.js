@@ -8,16 +8,15 @@ const store = new Vuex.Store({
     plugins: [createPersistedState()],
     state: {
         products: [],
-        cart: [],
-        amount: 1
+        cart: []
     },
     mutations: {
         setProducts: (state, products) => state.products = products,
         setCart: (state, item) => state.cart.push({ ...item, amount: 1 }),
-        removeItem: (state, id) => state.cart = state.cart.filter((item) => item.id !== id),
-        incrementProductAmount: (state, id) => state.cart.find((item) => item.id === id).amount++,
+        removeItem: (state, id) => state.cart = state.cart.filter((item) => item._id !== id),
+        incrementProductAmount: (state, id) => state.cart.find((item) => item._id === id).amount++,
         decrementProductAmount: (state, id) => {
-            const product = state.cart.find((item) => item.id === id)
+            const product = state.cart.find((item) => item._id === id)
             product.amount > 1 && product.amount--
         },
     },

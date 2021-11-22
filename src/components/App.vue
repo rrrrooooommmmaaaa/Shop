@@ -1,6 +1,8 @@
 <template>
     <div class="main">
-        <h1>Mini Shop</h1>
+        <header class="header">
+            <h1>Mini Shop</h1>
+        </header>
         <div class="content">
             <router-view></router-view>
         </div>
@@ -9,10 +11,6 @@
 
 <style>
     /* Generic styling */
-
-    a {
-        text-decoration: none;
-    }
 
     h2, h3, h4, h5, h6 {
         font-family: 'Montserrat', sans-serif;
@@ -32,6 +30,7 @@
         opacity: 1;
     }
 
+
     .btn:active {
         opacity: 0.8;
     }
@@ -45,17 +44,6 @@
     }
     .fade-enter, .fade-leave-active {
         opacity: 0
-    }
-    .counter {
-        display: flex;
-        align-items: center;
-        width: 100px;
-        justify-content: space-between;
-    }
-    .counter__button {
-        width: 30px;
-        height: 30px;
-        font-size: 18px;
     }
 
     /* Sections */
@@ -80,8 +68,9 @@
     }
 
     .header {
+        display: flex;
+        align-items: center;
         flex: 0;
-        padding: 1rem 0;
     }
 
     .main {
@@ -161,5 +150,27 @@
         text-align: center;
         color: #AAAAAA;
         font-size: 0.85rem;
+    }
+
+    .counter {
+        display: flex;
+        align-items: center;
+        width: 100px;
+        justify-content: space-between;
+    }
+
+    .counter__button {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .cart__button {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        padding: 4px 12px;
+        height: fit-content;
+        margin-left: 12px;
     }
 </style>

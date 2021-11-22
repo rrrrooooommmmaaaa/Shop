@@ -8,13 +8,11 @@
             Product not found
         </h2>
         <div>
-            <button v-on:click="addItem(index)" class="btn">Add to cart</button>  
+            <button v-on:click="addItem(index)" class="btn large">Add to cart</button>  
         </div>
     </div>
 </template>
 <script>
-    import products from '../data/products'
-
     export default {
         data: function() {
             return {
